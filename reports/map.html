@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e0ece5d41367244bce58de10aee3bd2e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e0ece5d41367244bce58de10aee3bd2e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e0ece5d41367244bce58de10aee3bd2e = L.map(
+                "map_e0ece5d41367244bce58de10aee3bd2e",
+                {
+                    center: [47.6062, -122.3321],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_be2b20b4de21e810fe886d8c26b80f84 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_be2b20b4de21e810fe886d8c26b80f84.addTo(map_e0ece5d41367244bce58de10aee3bd2e);
+        
+    
+            var circle_marker_785ad42bcecbe868603d1df4cbfc1d14 = L.circleMarker(
+                [47.6205, -122.3493],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e0ece5d41367244bce58de10aee3bd2e);
+        
+    
+        var popup_65a82b87a6ade3a729d1d2b2ba2f793e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abcc30dd8f7160fcb2d062368c13bb13 = $(`<div id="html_abcc30dd8f7160fcb2d062368c13bb13" style="width: 100.0%; height: 100.0%;">ZIP: 98039<br>Median Price: $2.1M</div>`)[0];
+                popup_65a82b87a6ade3a729d1d2b2ba2f793e.setContent(html_abcc30dd8f7160fcb2d062368c13bb13);
+            
+        
+
+        circle_marker_785ad42bcecbe868603d1df4cbfc1d14.bindPopup(popup_65a82b87a6ade3a729d1d2b2ba2f793e)
+        ;
+
+        
+    
+    
+            var circle_marker_6b5dff2590b724763d8378ed25bd02ab = L.circleMarker(
+                [47.6101, -122.2015],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e0ece5d41367244bce58de10aee3bd2e);
+        
+    
+        var popup_1754aa1f5de564d553998a43250ce9ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f52397d5e0dbf2319ec439f3a7f1e840 = $(`<div id="html_f52397d5e0dbf2319ec439f3a7f1e840" style="width: 100.0%; height: 100.0%;">ZIP: 98004<br>Median Price: $1.8M</div>`)[0];
+                popup_1754aa1f5de564d553998a43250ce9ff.setContent(html_f52397d5e0dbf2319ec439f3a7f1e840);
+            
+        
+
+        circle_marker_6b5dff2590b724763d8378ed25bd02ab.bindPopup(popup_1754aa1f5de564d553998a43250ce9ff)
+        ;
+
+        
+    
+    
+            var circle_marker_bee15885880637bc30b6c0f34cbc41a3 = L.circleMarker(
+                [47.5707, -122.2221],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e0ece5d41367244bce58de10aee3bd2e);
+        
+    
+        var popup_e2899284cd17d0a6517bb23c66511837 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4a58f7be36c1dcb5bd8a225318d6b6a = $(`<div id="html_f4a58f7be36c1dcb5bd8a225318d6b6a" style="width: 100.0%; height: 100.0%;">ZIP: 98040<br>Median Price: $1.7M</div>`)[0];
+                popup_e2899284cd17d0a6517bb23c66511837.setContent(html_f4a58f7be36c1dcb5bd8a225318d6b6a);
+            
+        
+
+        circle_marker_bee15885880637bc30b6c0f34cbc41a3.bindPopup(popup_e2899284cd17d0a6517bb23c66511837)
+        ;
+
+        
+    
+    
+            tile_layer_be2b20b4de21e810fe886d8c26b80f84.addTo(map_e0ece5d41367244bce58de10aee3bd2e);
+        
+</script>
+</html>
