@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
 sample = add_house_age(sample)
 sample = add_renovated_flag(sample)
-sample = add_price_per_sqft(sample)
+sample = add_price_per_sqft(sample) # type: ignore
 
 print(sample)
 
