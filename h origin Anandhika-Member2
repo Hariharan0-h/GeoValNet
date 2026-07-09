@@ -1,0 +1,10 @@
+[33me17071c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/distance-geospatial-feature[m[33m)[m feat: analyze feature relationships using correlation analysis
+[33mc4e1264[m feat: create exploratory visualizations for geographic property analysis
+[33m1e8b758[m feat: add distance based geospatial feature engineering
+[33m96bcc81[m[33m ([m[1;32mAnandhika-Member2[m[33m)[m feat: compute dist_city_center for all houses using haversine util (fixes #4)
+[33m6b976dc[m test: unit tests for haversine — Seattle to Bellevue ≈ 11.5 km (fixes #4)
+[33maf50f4e[m feat: implement haversine(lat1, lon1, lat2, lon2) distance function (fixes #4)
+[33m142ef02[m viz: export Folium heatmap to reports/map.html and log cluster summary (fixes #3)
+[33mbd87357[m viz: load cleaned GeoDataFrame and compute median price per ZIP code (fixes #3)
+[33mdcd32f8[m viz: load sample housing dataset and compute median price per ZIP code (fixes #3)
+[33m4098a21[m chore: add requirements.txt with pinned versions for reproducibility (fixes #1)
