@@ -1,16 +1,15 @@
-# GeoValNet
+---
 
-GeoValNet is a geospatial real estate valuation project that combines
-tabular housing features with spatial information to improve house price
-prediction.
+## Data Versioning
 
-## Project Structure
+Large datasets are intentionally excluded from Git using `.gitignore`.
 
-- src/          : Source code
-- notebooks/    : Jupyter notebooks
-- data/         : Raw and processed datasets (gitignored)
-- models/       : Trained models (gitignored)
-- reports/      : Generated reports and visualizations
-- tests/        : Unit tests
+Developers should download the King County housing dataset locally before
+running the notebooks.
 
-This repository follows a 25-day sprint plan with semantic commits.
+The `data/` and `models/` directories are not committed to the repository.
+
+### DVC Placeholder
+
+Future versions of GeoValNet can integrate Data Version Control (DVC)
+to manage large datasets and trained model artifacts.
