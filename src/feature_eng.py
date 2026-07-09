@@ -5,8 +5,19 @@ Feature engineering utilities for GeoValNet.
 from builtins import int, print
 
 import pandas as pd
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
+def build_numeric_pipeline():
+    """
+    Build preprocessing pipeline for numeric features.
+    """
 
+    pipeline = Pipeline([
+        ("scaler", StandardScaler())
+    ])
+
+    return pipeline
 def add_house_age(df):
     """
     Create house_age feature using reference year 2015.
@@ -28,7 +39,10 @@ def add_renovated_flag(df):
 
     return df
 if __name__ == "__main__":
+    pipeline = build_numeric_pipeline()
 
+    print("\nPipeline created:")
+    print(pipeline)
     sample = pd.DataFrame({
     "yr_built": [1990, 2005, 2010],
     "yr_renovated": [0, 1998, 2012],
