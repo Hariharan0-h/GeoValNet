@@ -2,23 +2,26 @@
 KNN Graph construction using BallTree and Haversine distance.
 """
 
+from builtins import print
+from threading import enumerate
+
 import numpy as np
 from sklearn.neighbors import BallTree
 
 
-def build_knn_graph(df, k=5):
+def build_adjacency_list(df, k=5):
     """
-    Build a KNN graph using latitude and longitude.
+    Build adjacency list from KNN graph.
     """
 
-    coords = np.radians(df[["lat", "long"]].values)
+    _, indices = build_knn_graph(df, k)
 
-    tree = BallTree(coords, metric="haversine")
+    adjacency = {}
 
-    distances, indices = tree.query(coords, k=k + 1)
+    for node, neighbors in enumerate(indices):
+        adjacency[node] = neighbors.tolist()
 
-    return distances[:, 1:], indices[:, 1:]
-
+    return adjacency
 
 if __name__ == "__main__":
 
@@ -30,6 +33,12 @@ if __name__ == "__main__":
     })
 
     distances, neighbors = build_knn_graph(sample, k=5)
+    adjacency = build_adjacency_list(sample, k=5)
+
+print("\nAdjacency List")
+
+for node, neighbors in adjacency.items():
+    print(node, "->", neighbors)
 
     print("Neighbor indices")
     print(neighbors)
