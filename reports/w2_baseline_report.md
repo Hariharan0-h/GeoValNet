@@ -15,3 +15,17 @@ which is difficult to capture using purely tabular features.
 
 Future iterations should integrate richer spatial context using
 graph neural networks and additional geospatial features.
+---
+
+# Performance Comparison
+
+| Model | Features | MAPE | RMSE |
+|-------|----------|------|------|
+| R1 | Tabular Only | 18.1% | 114200 |
+| R2 | Tabular + Spatial | 14.3% | 96200 |
+
+## Observation
+
+Adding spatial features such as distance to the city center,
+schools, and hospitals improves prediction accuracy by reducing
+both MAPE and RMSE compared to the baseline model.
