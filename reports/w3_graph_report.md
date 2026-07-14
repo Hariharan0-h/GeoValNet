@@ -73,3 +73,37 @@ The KNN graph was validated by:
 ## Conclusion
 
 The constructed KNN graph successfully captures the local spatial relationships among properties. This graph forms the basis for subsequent node feature engineering and graph neural network training.
+---
+
+# Node Feature Engineering
+
+The node feature matrix was prepared for graph-based learning.
+
+## Feature Set
+
+- bedrooms
+- bathrooms
+- sqft_living
+- sqft_lot
+- floors
+- grade
+- house_age
+- latitude
+- longitude
+- log_sqft
+- price_zscore
+
+## Validation
+
+- StandardScaler applied
+- No missing values
+- No infinite values
+- All features stored as float values
+
+## Final Feature Matrix
+
+Shape:
+
+(21613, 11)
+
+The node feature matrix is ready for Node2Vec embedding generation and Graph Neural Network training.
