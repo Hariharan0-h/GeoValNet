@@ -41,3 +41,35 @@ nearby houses without long-distance artifacts.
 
 The generated KNN graph is suitable for downstream Graph Neural Network
 models such as GraphSAGE and Graph Attention Networks.
+# Week 3 – KNN Graph Construction Report
+
+## Objective
+
+Construct a K-Nearest Neighbour (KNN) graph using the geographical coordinates of houses in the King County housing dataset.
+
+## Method
+
+- Dataset: King County Housing
+- Node: Individual house
+- Edge: Connection to K nearest neighbouring houses
+- K = 10
+- Distance Metric: Geographic proximity using latitude and longitude
+
+## Validation
+
+The KNN graph was validated by:
+
+- Inspecting neighbour indices
+- Computing neighbour distances
+- Visualizing graph connections using Folium
+- Verifying graph statistics
+
+## Graph Statistics
+
+- Number of Nodes: *(fill from notebook output)*
+- Number of Edges: *(fill from notebook output)*
+- Average Degree: *(fill from notebook output)*
+
+## Conclusion
+
+The constructed KNN graph successfully captures the local spatial relationships among properties. This graph forms the basis for subsequent node feature engineering and graph neural network training.
