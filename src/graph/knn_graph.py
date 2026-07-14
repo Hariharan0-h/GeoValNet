@@ -1,69 +1,37 @@
-"""
-KNN graph construction using BallTree and Haversine distance.
-"""
-
 import numpy as np
-from sklearn.neighbors import BallTree
+from math import radians, sin, cos, sqrt, atan2
+
+EARTH_RADIUS_KM = 6371.0
 
 
-def build_adjacency_list(df, k=10):
+def haversine(lat1, lon1, lat2, lon2):
     """
-    Build adjacency list using BallTree with Haversine metric.
-    """
-
-    coords = np.radians(df[["lat", "long"]])
-
-    tree = BallTree(coords, metric="haversine")
-
-    distances, indices = tree.query(coords, k=k)
-
-    adjacency = {}
-
-    for i in range(len(df)):
-        adjacency[i] = indices[i].tolist()
-
-    return adjacency, distances
-
-
-def compute_edge_weights(distances):
-    """
-    Compute inverse-distance edge weights.
+    Compute the Haversine distance (km) between two latitude/longitude points.
     """
 
-    distances_km = distances * 6371
+    lat1, lon1, lat2, lon2 = map(
+        radians,
+        [lat1, lon1, lat2, lon2]
+    )
 
-    weights = 1 / (distances_km + 1e-6)
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
 
-    return weights
+    a = (
+        sin(dlat / 2) ** 2
+        + cos(lat1)
+        * cos(lat2)
+        * sin(dlon / 2) ** 2
+    )
+
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    return EARTH_RADIUS_KM * c
 
 
-if __name__ == "__main__":
+def inverse_distance(distance, eps=1e-6):
+    """
+    Convert distance into an inverse-distance edge weight.
+    """
 
-    import pandas as pd
-
-    sample = pd.DataFrame({
-        "lat": [
-            47.6101,
-            47.6112,
-            47.6123,
-            47.6135,
-            47.6140
-        ],
-        "long": [
-            -122.2015,
-            -122.2021,
-            -122.2030,
-            -122.2040,
-            -122.2051
-        ]
-    })
-
-    adjacency, distances = build_adjacency_list(sample, k=3)
-
-    weights = compute_edge_weights(distances)
-
-    print("Adjacency List")
-    print(adjacency)
-
-    print("\nEdge Weights")
-    print(weights)
+    return 1.0 / (distance + eps)
