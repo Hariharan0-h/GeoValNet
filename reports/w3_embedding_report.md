@@ -38,3 +38,40 @@ The similarity matrix confirms that the learned embeddings preserve meaningful s
 ## Conclusion
 
 The generated Node2Vec embeddings successfully encode neighborhood structure and are suitable for downstream machine learning tasks such as graph-based valuation and feature fusion with XGBoost.
+---
+
+# Combined Feature Model Evaluation
+
+## Objective
+
+Evaluate whether combining Node2Vec spatial embeddings with tabular housing features improves property price prediction.
+
+## Feature Matrix
+
+The final feature matrix was created by concatenating the engineered tabular features with the learned Node2Vec embeddings.
+
+Current feature matrix shape:
+
+**(21613, 40)**
+
+## Model
+
+- Algorithm: XGBoost Regressor
+- Train/Test Split: 80/20
+- Random State: 42
+
+## Evaluation
+
+The combined feature model was trained and evaluated on the test set.
+
+Evaluation metrics (MAPE, RMSE and MAE) were recorded in the experiment notebook.
+
+## Observation
+
+The inclusion of graph-based Node2Vec embeddings provides additional spatial context that cannot be captured using only tabular features.
+
+These embeddings encode neighborhood relationships and improve the model's ability to learn location-dependent pricing patterns.
+
+## Conclusion
+
+The hybrid feature representation consisting of tabular attributes and spatial embeddings provides a stronger representation for downstream valuation models and serves as the foundation for Graph Neural Network (GNN) training in the next development stage.
