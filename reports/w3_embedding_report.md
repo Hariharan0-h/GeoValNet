@@ -107,3 +107,16 @@ Neighborhood aggregation features provide additional information about the local
 The model benefits from knowing the price distribution of nearby houses, improving its ability to estimate property values.
 
 These handcrafted neighborhood statistics serve as an effective intermediate step before adopting graph neural networks.
+---
+
+# Motivation for Graph Attention Networks (GAT)
+
+The neighborhood aggregation approach summarizes nearby property prices using handcrafted statistics such as the mean, minimum, maximum and standard deviation.
+
+Although effective, these features treat every neighbor equally and cannot learn complex interactions among neighboring properties.
+
+Graph Attention Networks address this limitation by learning attention weights for each neighboring node.
+
+This enables the model to automatically determine which neighboring properties are most influential for predicting the value of a target house.
+
+Therefore, neighborhood aggregation provides a strong baseline, while GAT offers a more expressive framework for modeling spatial dependencies in real estate valuation.
