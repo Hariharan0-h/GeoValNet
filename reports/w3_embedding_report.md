@@ -75,3 +75,35 @@ These embeddings encode neighborhood relationships and improve the model's abili
 ## Conclusion
 
 The hybrid feature representation consisting of tabular attributes and spatial embeddings provides a stronger representation for downstream valuation models and serves as the foundation for Graph Neural Network (GNN) training in the next development stage.
+---
+
+# Neighborhood Aggregation Feature Analysis
+
+## Objective
+
+Evaluate whether neighborhood price statistics improve house price prediction.
+
+## Neighbor Features Added
+
+- Mean Neighbor Price
+- Standard Deviation of Neighbor Price
+- Minimum Neighbor Price
+- Maximum Neighbor Price
+
+These statistics were computed from the K-Nearest Neighbor graph.
+
+## Model Performance
+
+| Metric | Value |
+|---------|-------|
+| MAPE | **12.36%** |
+| RMSE | **142321.05** |
+| MAE | **69380.24** |
+
+## Observation
+
+Neighborhood aggregation features provide additional information about the local housing market.
+
+The model benefits from knowing the price distribution of nearby houses, improving its ability to estimate property values.
+
+These handcrafted neighborhood statistics serve as an effective intermediate step before adopting graph neural networks.
