@@ -1,32 +1,26 @@
-# Data & model artifacts — never commit
-data/*.csv
-data/*.parquet
-data/*.bin
-models/
-*.pt
-*.h5
-*.pkl
-
-# Python
-__pycache__/
-*.py[cod]
+# Virtual environments
+geoenv/
 .venv/
 venv/
-*.egg-info/
-dist/
-build/
+env/
 
-# Env & secrets
-.env
+# Python cache
+__pycache__/
+*.pyc
 
-# Test cache
-.pytest_cache/
-pytest-cache-files-*/
+# Jupyter
+.ipynb_checkpoints/
 
-# OS
+# VS Code
+.vscode/
+
+# Data (optional)
+*.csv
+
+# Model files
+*.pkl
+*.joblib
+
+# OS files
 .DS_Store
 Thumbs.db
-
-# Outputs (generated plots — optional to commit)
-outputs/*.png
-outputs/*.html
